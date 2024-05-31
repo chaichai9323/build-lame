@@ -55,4 +55,8 @@ done
 
 sh exportXCFramework.sh Mp3Lame/Mp3Lame.xcodeproj
 
+cd $curDir
+
+git checkout .
+
 # echo $arch"完成"
