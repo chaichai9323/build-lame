@@ -5,6 +5,9 @@ if [[ ! -f "$1" && ! -d "$1" ]]; then
     exit 1
 fi
 
+# 获取工作区文件路径参数
+WORKSPACE_PATH="$1"
+
 CURRENT_DIR=$(cd "$(dirname $0)";pwd)
 cd $CURRENT_DIR
 
@@ -13,12 +16,11 @@ if [ ! -d "arm64-to-sim" ]; then
     
     cd "arm64-to-sim"
     swift build -c release --arch arm64 --arch x86_64
+
+    cd $CURRENT_DIR
 fi
 
 ARM64_TO_SIM_PATH="$CURRENT_DIR/arm64-to-sim/.build/apple/Products/Release/arm64-to-sim"
-
-# 获取工作区文件路径参数
-WORKSPACE_PATH="$1"
 
 # 提取文件名（不包含扩展名）作为项目名称
 PROJECT_NAME=$(basename "$WORKSPACE_PATH" | sed 's/\.[^.]*$//')
