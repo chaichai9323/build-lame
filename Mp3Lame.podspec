@@ -22,7 +22,7 @@ TODO: Add long description of the pod here.
 
   puts source_dir
   
-  s.source_files = "#{source_dir}/libmp3lame/*.{h,c}", "#{source_dir}/mpglib/*.{h,c}", "#{source_dir}/include/lame.h", "#{source_dir}/config.h"
+  s.source_files = "#{source_dir}/libmp3lame/**/*.h", "#{source_dir}/libmp3lame/*.c", "#{source_dir}/mpglib/*.{h,c}", "#{source_dir}/include/lame.h", "#{source_dir}/config.h"
   
   s.public_header_files = "#{source_dir}/config.h", "#{source_dir}/include/lame.h"
   # s.frameworks = 'UIKit', 'MapKit'
