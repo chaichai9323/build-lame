@@ -19,8 +19,11 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '13.0'
 
   source_dir = "lame-#{s.version}"
-
-  puts source_dir
+  s.preserve_paths = source_dir
+  s.prepare_command = <<-CMD
+  cd "#{source_dir}"
+  ./configure --disable-shared --disable-frontend --host=arm-apple-darwin CFLAGS="-arch arm64"
+  CMD
   
   s.source_files = "#{source_dir}/libmp3lame/**/*.h", "#{source_dir}/libmp3lame/*.c", "#{source_dir}/mpglib/*.{h,c}", "#{source_dir}/include/lame.h", "#{source_dir}/config.h"
   

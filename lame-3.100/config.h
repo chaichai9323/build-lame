@@ -112,11 +112,11 @@
 
 /* Define to 1 if the type `long double' works and has more range or precision
    than `double'. */
-#define HAVE_LONG_DOUBLE 1
+/* #undef HAVE_LONG_DOUBLE */
 
 /* Define to 1 if the type `long double' works and has more range or precision
    than `double'. */
-#define HAVE_LONG_DOUBLE_WIDER 1
+/* #undef HAVE_LONG_DOUBLE_WIDER */
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
@@ -196,7 +196,7 @@
 #define HAVE_UNISTD_H 1
 
 /* Define if SSE intrinsics work. */
-#define HAVE_XMMINTRIN_H 1
+/* #undef HAVE_XMMINTRIN_H */
 
 /* Define as const if the declaration of iconv() needs const. */
 #define ICONV_CONST 
@@ -282,13 +282,13 @@
 #define STDC_HEADERS 1
 
 /* IEEE754 compatible machine */
-#define TAKEHIRO_IEEE754_HACK 1
+/* #undef TAKEHIRO_IEEE754_HACK */
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
 #define TIME_WITH_SYS_TIME 1
 
 /* faster log implementation with less but enough precission */
-#define USE_FAST_LOG 1
+/* #undef USE_FAST_LOG */
 
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE
